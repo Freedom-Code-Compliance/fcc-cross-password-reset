@@ -158,7 +158,7 @@ export default function ResetPassword() {
     return (
       <Shell>
         <div className="flex flex-col items-center gap-4 py-12">
-          <div className="h-8 w-8 border-[3px] border-fcc-green/30 border-t-fcc-green rounded-full animate-spin" />
+          <div className="h-8 w-8 border-[3px] border-fcc-cyan/30 border-t-fcc-cyan rounded-full animate-spin" />
           <p className="text-sm text-text-secondary">
             Verifying password reset link...
           </p>
@@ -207,8 +207,8 @@ export default function ResetPassword() {
       <Shell>
         <div className="p-6 border-b border-border">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-lg bg-fcc-green/10">
-              <CheckCircle className="h-5 w-5 text-fcc-green" />
+            <div className="p-2.5 rounded-lg bg-fcc-cyan/10">
+              <CheckCircle className="h-5 w-5 text-fcc-cyan" />
             </div>
             <div>
               <h1 className="text-lg font-semibold text-text">
@@ -221,12 +221,12 @@ export default function ResetPassword() {
           </div>
         </div>
         <div className="p-6 space-y-4">
-          <div className="p-4 rounded-lg bg-fcc-green/5 border border-fcc-green/10 text-sm text-fcc-green-light">
+          <div className="p-4 rounded-lg bg-fcc-cyan/5 border border-fcc-cyan/10 text-sm text-fcc-cyan-light">
             Redirecting you back to <strong>{appName}</strong> to log in with
             your new password...
           </div>
           <div className="flex justify-center">
-            <div className="h-5 w-5 border-[3px] border-fcc-green/30 border-t-fcc-green rounded-full animate-spin" />
+            <div className="h-5 w-5 border-[3px] border-fcc-cyan/30 border-t-fcc-cyan rounded-full animate-spin" />
           </div>
         </div>
       </Shell>
@@ -239,8 +239,8 @@ export default function ResetPassword() {
       {/* Header */}
       <div className="p-6 border-b border-border">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 rounded-lg bg-fcc-green/10">
-            <Lock className="h-5 w-5 text-fcc-green" />
+          <div className="p-2.5 rounded-lg bg-fcc-cyan/10">
+            <Lock className="h-5 w-5 text-fcc-cyan" />
           </div>
           <div>
             <h1 className="text-lg font-semibold text-text">
@@ -276,7 +276,7 @@ export default function ResetPassword() {
               type={showPassword ? 'text' : 'password'}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3.5 py-2.5 bg-surface-elevated border border-border rounded-lg text-[0.9375rem] text-text placeholder:text-text-muted focus:outline-none focus:border-fcc-green focus:ring-[3px] focus:ring-fcc-green/15 hover:border-border-strong transition-all duration-150 pr-10"
+              className="w-full px-3.5 py-2.5 bg-surface-elevated border border-border rounded-lg text-[0.9375rem] text-text placeholder:text-text-muted focus:outline-none focus:border-fcc-cyan focus:ring-[3px] focus:ring-fcc-cyan/15 hover:border-border-strong transition-all duration-150 pr-10"
               placeholder="Enter new password"
               required
             />
@@ -307,7 +307,7 @@ export default function ResetPassword() {
             type={showPassword ? 'text' : 'password'}
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="w-full px-3.5 py-2.5 bg-surface-elevated border border-border rounded-lg text-[0.9375rem] text-text placeholder:text-text-muted focus:outline-none focus:border-fcc-green focus:ring-[3px] focus:ring-fcc-green/15 hover:border-border-strong transition-all duration-150"
+            className="w-full px-3.5 py-2.5 bg-surface-elevated border border-border rounded-lg text-[0.9375rem] text-text placeholder:text-text-muted focus:outline-none focus:border-fcc-cyan focus:ring-[3px] focus:ring-fcc-cyan/15 hover:border-border-strong transition-all duration-150"
             placeholder="Confirm new password"
             required
           />
@@ -315,7 +315,7 @@ export default function ResetPassword() {
             <p className="text-xs text-red-400">Passwords do not match</p>
           )}
           {passwordsMatch && (
-            <p className="text-xs text-fcc-green">Passwords match</p>
+            <p className="text-xs text-fcc-cyan">Passwords match</p>
           )}
         </div>
 
@@ -334,7 +334,7 @@ export default function ResetPassword() {
               ].map(({ ok, label }) => (
                 <li
                   key={label}
-                  className={ok ? 'text-fcc-green' : 'text-text-muted'}
+                  className={ok ? 'text-fcc-cyan' : 'text-text-muted'}
                 >
                   {ok ? '\u2713' : '\u25CB'} {label}
                 </li>
@@ -347,7 +347,7 @@ export default function ResetPassword() {
         <button
           type="submit"
           disabled={isLoading || !passwordsMatch || !isStrong}
-          className="w-full py-2.5 px-4 bg-fcc-green text-white rounded-lg text-sm font-semibold hover:bg-fcc-green-hover transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full py-2.5 px-4 bg-fcc-cyan text-white rounded-lg text-sm font-semibold hover:bg-fcc-cyan-hover transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isLoading ? (
             <>

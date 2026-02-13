@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-fcc-green: #00AD56;
-  --color-fcc-green-hover: #009549;
-  --color-fcc-green-light: #e6f9ef;
-  --color-fcc-green-50: #f0fdf6;
+  --color-fcc-cyan: #2B78F7;
+  --color-fcc-cyan-hover: #1F65D6;
+  --color-fcc-cyan-light: #dbeafe;
+  --color-fcc-cyan-50: #eff6ff;
 
   --color-bg: #0c0e14;
   --color-bg-alt: #111318;
