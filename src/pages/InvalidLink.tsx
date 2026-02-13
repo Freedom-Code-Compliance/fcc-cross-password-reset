@@ -5,9 +5,7 @@ export default function InvalidLink() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-bg p-4">
       {/* Logo */}
       <div className="mb-8 flex items-center gap-3">
-        <div className="w-10 h-10 rounded-lg bg-fcc-green flex items-center justify-center">
-          <span className="text-white font-bold text-lg">F</span>
-        </div>
+        <img src="/fcc-logo.png" alt="FCC" className="h-10 w-10" />
         <span className="text-lg font-semibold text-text tracking-tight">
           Freedom Code Compliance
         </span>
