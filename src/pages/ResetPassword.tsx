@@ -9,8 +9,9 @@ export default function ResetPassword() {
   const navigate = useNavigate();
 
   const appCode = searchParams.get('app');
+  const returnUrl = searchParams.get('returnUrl');
   const appName = getAppName(appCode);
-  const loginUrl = getLoginUrl(appCode);
+  const loginUrl = getLoginUrl(appCode, returnUrl);
 
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');

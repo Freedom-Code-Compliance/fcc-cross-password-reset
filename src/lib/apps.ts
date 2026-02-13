@@ -26,9 +26,14 @@ export const APP_NAMES: Record<string, string> = {
 
 /**
  * Get the login URL for an app code.
- * Falls back to fccOPS if the code is unknown.
+ * Prefers an explicit returnUrl (sent by the requesting app so it
+ * works across dev/staging/production), falls back to the hardcoded
+ * production URLs, then to fccOPS as a last resort.
  */
-export function getLoginUrl(appCode: string | null): string {
+export function getLoginUrl(appCode: string | null, returnUrl?: string | null): string {
+  if (returnUrl) {
+    return returnUrl;
+  }
   if (appCode && APP_LOGIN_URLS[appCode]) {
     return APP_LOGIN_URLS[appCode];
   }
